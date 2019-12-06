@@ -14,12 +14,14 @@ namespace DemoCore.Service
         {
             _cinemas.Add(new Cinema
             {
+                Id=1,
                 Name = "City Cinema",
                 Location = "Road ABC, NO.123",
                 Capacity = 1000
             });
             _cinemas.Add(new Cinema
             {
+                Id=2,
                 Name = "Fly Cinema",
                 Location = "Road Hello, NO.1024",
                 Capacity = 500
