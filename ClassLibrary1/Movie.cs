@@ -10,6 +10,7 @@ namespace CoreDemo.Models
         public string Name { get; set; }
         public int CinemaId { get; set; }
         public string Starring { get; set; }
+        public string Starring1 { get; set; }
         public DateTime ReleaseDate { get; set; }
     }
 }
