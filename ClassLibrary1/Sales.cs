@@ -9,6 +9,6 @@ namespace CoreDemo.Models
         public int CinemaId { get; set; }
         public int MovieId { get; set; }
         public int AudienceCount { get; set; }
-        public int AudienceCount1 { get; set; }
+  
     }
 }
