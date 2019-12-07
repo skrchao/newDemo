@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" />
     <title>@ViewBag.Title</title>
 
-    <environment include="Develop">
+    <environment include="Development">
         <link rel="stylesheet" asp-hre-include="css/*" asp-href-exclude="css/all.min.css" />
     </environment>
-    <environment exclude="Develop">
+    <environment exclude="Development">
         <link rel="stylesheet" asp-hre-include="css/all.min.css" />
     </environment>
 
@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img asp-append-version="true" src="~/image/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            @ViewBag.Title
+        </a>
+    </nav>
     <div>
         @RenderBody()
     </div>

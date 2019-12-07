@@ -37,7 +37,7 @@ namespace DemoCore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controllser=Home}/{action=Index}/{id?}"
+                    template: "{controller=Home}/{action=Index}/{id?}"
                     );
             });
 

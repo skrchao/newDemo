@@ -27,14 +27,21 @@ namespace DemoCore.Controllers
             return View(new Cinema());
         }
 
+        public IActionResult Edit(int cinemaId)
+        {
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public async Task<IActionResult> Add(Cinema model)
         {
             if (ModelState.IsValid)
             {
                 await _cinemaService.AddAsync(model);
-            }
+            }       
             return RedirectToAction("Index");
         }
+
+
     }
 }

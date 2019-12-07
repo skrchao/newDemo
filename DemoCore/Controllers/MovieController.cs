@@ -37,6 +37,7 @@ namespace DemoCore.Controllers
         {
             return RedirectToAction("Index");
         }
+        [HttpPost]
         public async Task<IActionResult> Add(Movie movie)
         {
             if (ModelState.IsValid)
