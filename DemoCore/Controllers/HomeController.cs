@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoreDemo.Models;
 using DemoCore.Service;
+using DemoCore.Settings;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace DemoCore.Controllers
 {
@@ -12,7 +14,7 @@ namespace DemoCore.Controllers
     {
         private readonly ICinemaService _cinemaService;
 
-        public HomeController(ICinemaService cinemaService)
+        public HomeController(ICinemaService cinemaService,IOptions<ConnectionOptions>options)
         {
             _cinemaService = cinemaService;
         }
@@ -27,11 +29,28 @@ namespace DemoCore.Controllers
             return View(new Cinema());
         }
 
-        public IActionResult Edit(int cinemaId)
+        public async Task<IActionResult> Edit(int cinemaId)
         {
-            return RedirectToAction("Index");
+            var cinema = await _cinemaService.GetByIdAsync(cinemaId);
+            return View(cinema);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Cinema model)
+        {
+            if (ModelState.IsValid)
+            {
+                var exist = await _cinemaService.GetByIdAsync(id);
+                if (exist == null)
+                {
+                    return NotFound();
+                }
+                exist.Name = model.Name;
+                exist.Location = model.Location;
+                exist.Capacity = model.Capacity;
+            }
+            return RedirectToAction("Index");
+        }
         [HttpPost]
         public async Task<IActionResult> Add(Cinema model)
         {

@@ -1,5 +1,9 @@
 ﻿@using CoreDemo.Models
+@using Microsoft.Extensions.Options
+@using DemoCore.Settings
 @model IEnumerable<Cinema>
+
+@inject IOptions<ConnectionOptions> options;
 <div class="container">
     <div class="row">
         <table class="table table-dark">
@@ -9,12 +13,19 @@
                     <th scope="col">Name</th>
                     <th scope="col">Location</th>
                     <th scope="col">Capacity</th>
-                    <th></th>
+                    <th>
+                        @options.Value.DefaultConnection
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 @Html.DisplayForModel()
             </tbody>
         </table>
+
+        <a asp-action="Add">添加</a>
+        
+        @await Component.InvokeAsync("MovieCount",new {cimemaId=1 })
+        <vc:movie-count cinema-id="1"></vc:movie-count>
     </div>
 </div>

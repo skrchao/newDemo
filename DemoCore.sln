@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCore", "DemoCore\DemoCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreDemo.Models", "ClassLibrary1\CoreDemo.Models.csproj", "{D4B035AB-A1F5-46E4-A5E7-A142410CB6D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial", "Tutorial\Tutorial.csproj", "{F3578904-414F-4C80-AB6C-D5A1A8671582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial", "Tutorial\Tutorial.csproj", "{F3578904-414F-4C80-AB6C-D5A1A8671582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
