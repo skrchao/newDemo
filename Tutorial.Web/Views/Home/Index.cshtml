@@ -1,0 +1,13 @@
+﻿@using Tutorial.Web.ViewModels
+@model IEnumerable<HomeIndexViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (var i in Model)
+{
+    <h2>@i.Name</h2>
+    <h2>@i.Age</h2>
+
+}
+

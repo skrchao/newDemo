@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreDemo.Models", "ClassLib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial", "Tutorial\Tutorial.csproj", "{F3578904-414F-4C80-AB6C-D5A1A8671582}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial.Web", "Tutorial.Web\Tutorial.Web.csproj", "{3D1231D2-7A34-431C-B3FB-8AD9CC060CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F3578904-414F-4C80-AB6C-D5A1A8671582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3578904-414F-4C80-AB6C-D5A1A8671582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3578904-414F-4C80-AB6C-D5A1A8671582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1231D2-7A34-431C-B3FB-8AD9CC060CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1231D2-7A34-431C-B3FB-8AD9CC060CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1231D2-7A34-431C-B3FB-8AD9CC060CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1231D2-7A34-431C-B3FB-8AD9CC060CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
